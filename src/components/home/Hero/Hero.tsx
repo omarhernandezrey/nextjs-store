@@ -1,7 +1,11 @@
+import React from 'react'; // Add missing import for React
+import styles from './Hero.module.css';
+
 export const Hero = () => {
     return(
-      <section>
-        <h1>Hero</h1>
+      <section className={styles.Hero}>
+        <h1>Future world</h1>
+        <h2>Empowering Your Tomorrow, Today!</h2>
       </section>
     )
-  }
+}
