@@ -1,10 +1,19 @@
-// Asegúrate de importar React si estás usando una versión de React antes de la 17 o si configuras tu proyecto para requerir importaciones explícitas.
-import React from 'react';
+import styles from './Description.module.sass';
+import Image from 'next/image';
 
-export const Description = () => (
-  <section>
-    <img src="/images/description.jpeg" alt="Descripción del mercado de productos" />
-    <h2>Descripción</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorem, natus minus tenetur laudantium accusamus itaque quisquam voluptatibus odio nesciunt reiciendis illo magnam porro non voluptates. Ea consequatur eligendi at!</p>
-  </section>
-);
+export const Description = () => {
+  return (
+    <section className={styles.Description}>
+      <Image
+        src="/images/description.jpeg"
+        alt="products marketplace"
+        width={500}
+        height={300}
+      />
+      <div className={styles.Description__text}>
+        <h2>Bring the future today</h2>
+        <p>Future World: Your Gateway to Tomorrow's Tech! Dive into a world of cutting-edge gadgets and gear. Stay ahead of the curve and redefine your digital lifestyle with us.</p>
+      </div>
+    </section>
+  )
+}
